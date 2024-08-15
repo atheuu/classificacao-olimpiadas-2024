@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classificação Alternativa de Medalhas - Olimpíadas 2024</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <h1>Classificação Alternativa de Medalhas - Olimpíadas 2024</h1>
-    <table>
-        <thead>
-            <tr>
-                <th class="center">Posição</th>
-                <th>País</th>
-                <th class="center">Ouro</th>
-                <th class="center">Prata</th>
-                <th class="center">Bronze</th>
-                <th class="center">Pontuação</th>
-            </tr>
-        </thead>
-        <tbody id="tabela-classificacao">
-            <!-- O conteúdo da tabela será inserido aqui pelo JavaScript -->
-        </tbody>
-    </table>
-
-    <script src="classificacao.js"></script>
-
+    <div class="tabela-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="center">Posição</th>
+                    <th>Equipe</th>
+                    <th class="center">Ouro</th>
+                    <th class="center">Prata</th>
+                    <th class="center">Bronze</th>
+                    <th class="center">Méritos</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-classificacao">
+                <!-- O conteúdo da tabela será inserido aqui pelo JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="dados.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>

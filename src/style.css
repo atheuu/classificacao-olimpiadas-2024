@@ -1,28 +1,87 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
     margin: 0;
     padding: 20px;
 }
+
 h1 {
     text-align: center;
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
 }
+
+.tabela-container {
+    background-color: #1e1e1e; /* Fundo escuro do contêiner da tabela */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 80%; /* Define a largura do contêiner da tabela */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+}
+
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+    width: 100%; /* Faz a tabela ocupar toda a largura do contêiner */
+    border-collapse: separate; /* Permite o espaçamento entre linhas */
+    border-spacing: 0; /* Remove o espaçamento padrão */
+    margin: 0;
+    color: #e0e0e0;
 }
-th, td {
-    padding: 10px;
+
+th,
+td {
+    padding: 16px 15px; /* Aumenta a altura das células */
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
+
 th {
-    background-color: #f2f2f2;
+    background-color: #333; /* Cabeçalho escuro */
+    text-transform: uppercase;
+    font-size: 16px; /* Aumenta o tamanho da fonte no cabeçalho */
+    letter-spacing: 0.1em;
+    color: #e0e0e0;
 }
+
+tr {
+    border-bottom: 1px solid #333; /* Linha de separação escura entre as linhas */
+}
+
+tr:nth-child(even) {
+    background-color: #222; /* Linha de fundo alternada escura */
+}
+
 tr:hover {
-    background-color: #f1f1f1;
+    background-color: #333; /* Linha de fundo ao passar o mouse */
 }
+
 .center {
     text-align: center;
+}
+
+tr.highlighted {
+    background-color: #2c6e49; /* Destaca a linha com uma cor verde escura */
+}
+
+tr.highlighted td {
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+td.pais {
+    display: flex;
+    align-items: center;
+}
+
+td.pais img {
+    margin-right: 15px; /* Ajusta o espaçamento entre a imagem e o texto */
+    width: 30px; /* Aumenta o tamanho da imagem */
+    height: 20px; /* Aumenta a altura da imagem */
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+td.pais span {
+    font-size: 18px; /* Aumenta o tamanho da fonte do texto na célula */
 }
