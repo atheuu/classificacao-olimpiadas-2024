@@ -30,6 +30,10 @@ body {
     list-style-position: inside; /* Move os marcadores da lista para dentro do contêiner */
 }
 
+.explicacao-container li {
+    padding-bottom: 5px; 
+}
+
 table {
     width: 100%; /* Faz a tabela ocupar toda a largura do contêiner */
     border-collapse: separate; /* Permite o espaçamento entre linhas */
