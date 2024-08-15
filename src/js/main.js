@@ -8,6 +8,11 @@ paises.forEach(pais => {
     pais.pontuacao = calcularPontuacao(pais);
 });
 
+// Calcula o total de medalhas de cada país e adiciona ao objeto
+paises.forEach(pais => {
+    pais.total = pais.ouro + pais.prata + pais.bronze;
+});
+
 // Ordena os países por pontuação, do maior para o menor
 paises.sort((a, b) => b.pontuacao - a.pontuacao);
 
@@ -35,6 +40,7 @@ paises.forEach((pais, i) => {
         <td class="center">${pais.ouro}</td>
         <td class="center">${pais.prata}</td>
         <td class="center">${pais.bronze}</td>
+        <td class="center">${pais.total}</td>
         <td class="center">${pais.pontuacao}</td>
     `;
 

@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classificação Alternativa de Medalhas - Olimpíadas 2024</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classificação Alternativa de Medalhas - Olimpíadas 2024</title>
 
-<body>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-    <h1>Classificação Alternativa de Medalhas - Olimpíadas 2024</h1>
-    <div class="tabela-container">
-        <table>
-            <thead>
-                <tr>
-                    <th class="center">Posição</th>
-                    <th>Equipe</th>
-                    <th class="center">Ouro</th>
-                    <th class="center">Prata</th>
-                    <th class="center">Bronze</th>
-                    <th class="center">Méritos</th>
-                </tr>
-            </thead>
-            <tbody id="tabela-classificacao">
-                <!-- O conteúdo da tabela será inserido aqui pelo JavaScript -->
-            </tbody>
-        </table>
-    </div>
-    <script src="dados.js"></script>
-    <script src="main.js"></script>
-</body>
+    <body>
+        <img class="emblema" src="https://olympics.com/_pr/topic-assets/paris-2024/emblem-oly.svg" alt="">
+        <h1>Classificação Alternativa de Medalhas - Olimpíadas 2024</h1>
 
+        <div class="explicacao-container">
+            <h2>Como os pontos de mérito são calculados?</h2>
+            <p>
+                Nesta classificação alternativa, os pontos de mérito são calculados com base nas medalhas obtidas por cada equipe. A pontuação é atribuída da seguinte forma:
+            </p>
+            <ul>
+                <li><strong>Ouro:</strong> 9 pontos por cada medalha de ouro.</li>
+                <li><strong>Prata:</strong> 3 pontos por cada medalha de prata.</li>
+                <li><strong>Bronze:</strong> 1 ponto por cada medalha de bronze.</li>
+            </ul>
+            <p>
+                O total de pontos de mérito de cada equipe é então somado para determinar a sua posição na tabela. Esta classificação oferece uma visão alternativa ao quadro tradicional de medalhas, destacando o valor relativo de cada medalha.
+            </p>
+        </div>
+
+        <div class="tabela-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="center"></th>
+                        <th>Equipe</th>
+                        <th class="center"><img src="img/ouro.svg" alt=""></th>
+                        <th class="center"><img src="img/prata.svg" alt=""></th>
+                        <th class="center"><img src="img/bronze.svg" alt=""></th>
+                        <th class="center"><img src="img/total.svg" alt=""></th>
+                        <th class="center"><img src="img/merit.png" alt="" width="20px"></th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-classificacao">
+                    <!-- O conteúdo da tabela será inserido aqui pelo JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <script src="js/dados.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>

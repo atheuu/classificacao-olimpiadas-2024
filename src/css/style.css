@@ -1,25 +1,33 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #121212; /* Fundo escuro */
     color: #e0e0e0; /* Texto claro */
     margin: 0;
     padding: 20px;
+    box-sizing: border-box;
 }
 
-h1 {
-    text-align: center;
-    font-size: 24px;
-    color: #e0e0e0;
-    margin-bottom: 20px;
+.emblema {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.tabela-container {
-    background-color: #1e1e1e; /* Fundo escuro do contêiner da tabela */
+.tabela-container, .explicacao-container {
+    background-color: #1e1e1e; /* Fundo escuro do contêiner */
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    width: 80%; /* Define a largura do contêiner da tabela */
+    width: 80%; /* Define a largura do contêiner */
     margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 16px; /* Mantém o padding, mas incluído na largura */
+    box-sizing: border-box; /* Garante que o padding não adicione à largura total */
+}
+
+.explicacao-container ul {
+    padding-left: 0; /* Remove o padding padrão da lista */
+    list-style-position: inside; /* Move os marcadores da lista para dentro do contêiner */
 }
 
 table {
@@ -28,6 +36,18 @@ table {
     border-spacing: 0; /* Remove o espaçamento padrão */
     margin: 0;
     color: #e0e0e0;
+}
+
+.explicacao-container {
+    text-align: center;
+    margin-bottom: 20px; /* Adiciona um espaçamento entre a explicação e a tabela */
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
 }
 
 th,
