@@ -1,7 +1,7 @@
 body {
     font-family: "Montserrat", sans-serif;
-    background-color: #121212; /* Fundo escuro */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #121212;
+    color: #e0e0e0;
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
@@ -14,78 +14,112 @@ body {
     margin-right: auto;
 }
 
-.tabela-container, .explicacao-container {
-    background-color: #1e1e1e; /* Fundo escuro do contêiner */
+h1 {
+    text-align: center; /* Centraliza o texto */
+}
+
+.explicacao-container {
+    background-color: #1e1e1e;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    width: 80%; /* Define a largura do contêiner */
-    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    padding: 16px; /* Mantém o padding, mas incluído na largura */
-    box-sizing: border-box; /* Garante que o padding não adicione à largura total */
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto */
 }
 
 .explicacao-container ul {
-    padding-left: 0; /* Remove o padding padrão da lista */
-    list-style-position: inside; /* Move os marcadores da lista para dentro do contêiner */
+    padding-left: 0;
+    list-style-position: inside;
+    display: inline-block; /* Permite centralizar o conteúdo da lista */
+    text-align: center;
 }
 
 .explicacao-container li {
     padding-bottom: 5px; 
 }
 
+.tabela-container {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
 table {
-    width: 100%; /* Faz a tabela ocupar toda a largura do contêiner */
-    border-collapse: separate; /* Permite o espaçamento entre linhas */
-    border-spacing: 0; /* Remove o espaçamento padrão */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-collapse: collapse;
     margin: 0;
     color: #e0e0e0;
 }
 
-.explicacao-container {
-    text-align: center;
-    margin-bottom: 20px; /* Adiciona um espaçamento entre a explicação e a tabela */
+thead {
+    display: flex;
+    width: 100%;
 }
 
-h1 {
-    text-align: center;
-    font-size: 24px;
-    color: #e0e0e0;
-    margin-bottom: 20px;
+tbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-th,
-td {
-    padding: 16px 15px; /* Aumenta a altura das células */
+tr {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+
+th.pais {
+    flex: 4; /* Aumenta o espaço para o cabeçalho da coluna das equipes/países */
     text-align: left;
 }
 
+td.pais {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    text-align: left;
+    flex: 4; /* Aumenta o espaço para a coluna das equipes/países */
+}
+
+th, td {
+    flex: 1; /* Todas as outras colunas ocupam espaço proporcional */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
 th {
-    background-color: #333; /* Cabeçalho escuro */
+    background-color: #333;
     text-transform: uppercase;
-    font-size: 16px; /* Aumenta o tamanho da fonte no cabeçalho */
     letter-spacing: 0.1em;
     color: #e0e0e0;
 }
 
-tr {
-    border-bottom: 1px solid #333; /* Linha de separação escura entre as linhas */
-}
-
 tr:nth-child(even) {
-    background-color: #222; /* Linha de fundo alternada escura */
+    background-color: #222;
 }
 
 tr:hover {
-    background-color: #333; /* Linha de fundo ao passar o mouse */
-}
-
-.center {
-    text-align: center;
+    background-color: #333;
 }
 
 tr.highlighted {
-    background-color: #2c6e49; /* Destaca a linha com uma cor verde escura */
+    background-color: #2c6e49;
 }
 
 tr.highlighted td {
@@ -96,128 +130,61 @@ tr.highlighted td {
 td.pais {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 td.pais img {
-    margin-right: 15px; /* Ajusta o espaçamento entre a imagem e o texto */
-    width: 30px; /* Aumenta o tamanho da imagem */
-    height: 20px; /* Aumenta a altura da imagem */
+    margin-right: 8px;
+    width: 30px;
+    height: 20px;
     object-fit: cover;
     border-radius: 2px;
 }
 
 td.pais span {
-    font-size: 18px; /* Aumenta o tamanho da fonte do texto na célula */
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 /* Tornando a tabela rolável em telas pequenas */
 @media (max-width: 768px) {
     .tabela-container {
-        overflow-x: auto; /* Adiciona rolagem horizontal */
-    }
-
-    table {
-        width: 100%; /* Mantém a tabela ocupando 100% do contêiner */
-        min-width: 600px; /* Define uma largura mínima para a tabela */
-    }
-
-    th,
-    td {
-        padding: 10px 8px; /* Reduz o padding das células para economizar espaço */
-        font-size: 14px; /* Diminui o tamanho da fonte */
-    }
-
-    .emblema {
-        width: 80px; /* Reduz o tamanho da imagem emblema */
-    }
-
-    h1 {
-        font-size: 20px; /* Reduz o tamanho da fonte do título */
-    }
-
-    .explicacao-container {
-        padding: 10px; /* Reduz o padding da explicação */
-    }
-}
-
-/* Para telas muito pequenas (menores que 480px) */
-@media (max-width: 480px) {
-    th,
-    td {
-        padding: 8px 6px; /* Reduz ainda mais o padding das células */
-        font-size: 12px; /* Diminui ainda mais o tamanho da fonte */
-    }
-
-    h1 {
-        font-size: 18px; /* Reduz o tamanho da fonte do título */
-    }
-
-    .emblema {
-        width: 60px; /* Reduz o tamanho da imagem emblema */
-    }
-}
-
-/* Responsividade para telas menores que 480px */
-@media (max-width: 480px) {
-    .tabela-container {
         overflow-x: auto;
     }
 
-    table, thead, tbody, th, td, tr {
-        display: block; /* Faz todos os elementos da tabela serem blocos */
+    th, td {
+        padding: 8px 6px;
+        font-size: 12px;
     }
 
-    thead tr {
-        display: none; /* Esconde os cabeçalhos da tabela */
+    td.pais {
+        width: 90px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-
-    tr {
-        margin-bottom: 10px; /* Adiciona espaço entre as linhas */
-        border-bottom: 1px solid #333; /* Adiciona uma borda inferior */
-    }
-
-    td {
-        position: relative;
-        padding-left: 50%; /* Adiciona espaço para os títulos das colunas */
-        text-align: right; /* Alinha o texto à direita */
-        font-size: 14px; /* Diminui o tamanho da fonte */
-    }
-
-    td::before {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        width: 45%; /* Define a largura do título da coluna */
-        white-space: nowrap;
-        transform: translateY(-50%);
-        font-weight: bold;
-        color: #ccc; /* Cor dos títulos das colunas */
-        text-align: left; /* Alinha o título à esquerda */
-        font-size: 14px;
-    }
-
-    /* Adiciona o título da coluna como conteúdo antes de cada célula */
-    td:nth-of-type(1)::before { content: "Posição"; }
-    td:nth-of-type(2)::before { content: "Equipe"; }
-    td:nth-of-type(3)::before { content: "Ouro"; }
-    td:nth-of-type(4)::before { content: "Prata"; }
-    td:nth-of-type(5)::before { content: "Bronze"; }
-    td:nth-of-type(6)::before { content: "Total"; }
-    td:nth-of-type(7)::before { content: "Mérito"; }
 
     .emblema {
-        width: 50px; /* Reduz o tamanho da imagem emblema para telas muito pequenas */
+        width: 70px;
     }
 
     h1 {
-        font-size: 16px; /* Reduz o tamanho da fonte do título */
+        font-size: 18px;
     }
 
     .explicacao-container {
-        padding: 8px; /* Reduz o padding da explicação */
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        padding: 4px 2px;
+        font-size: 10px;
     }
 
-    .explicacao-container p, .explicacao-container ul {
-        font-size: 14px; /* Diminui o tamanho da fonte do texto explicativo */
+    td.pais {
+        width: 70px;
     }
 }
