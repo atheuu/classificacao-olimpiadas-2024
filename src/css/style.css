@@ -31,11 +31,6 @@ h1 {
     text-align: center; /* Centraliza o texto */
 }
 
-.explicacao-container p {
-    padding-left: 150px;
-    padding-right: 150px;
-}
-
 .explicacao-container ul {
     padding-left: 0;
     list-style-position: inside;
@@ -164,10 +159,6 @@ th img {
 
 /* Tornando a tabela rolável em telas pequenas */
 @media (max-width: 768px) {
-
-    .explicacao-container p {
-        padding: 0%;
-    }
 
     .tabela-container {
         overflow-x: auto;
