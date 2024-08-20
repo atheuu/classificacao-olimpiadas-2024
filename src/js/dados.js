@@ -1,640 +1,731 @@
 // Dados reais dos países das Olimpíadas de 2024
-const paises = [
+const equipes = [
     {
-        pais: "Estados Unidos",
+        equipe: "Estados Unidos",
+        abreviacao: "USA",
         ouro: 40,
         prata: 44,
         bronze: 42,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/USA.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/USA.png"
     },
     {
-        pais: "China",
+        equipe: "China",
+        abreviacao: "CHN",
         ouro: 40,
         prata: 27,
         bronze: 24,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CHN.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CHN.png"
     },
     {
-        pais: "Japão",
+        equipe: "Japão",
+        abreviacao: "JPN",
         ouro: 20,
         prata: 12,
         bronze: 13,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JPN.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JPN.png"
     },
     {
-        pais: "Austrália",
+        equipe: "Austrália",
+        abreviacao: "AUS",
         ouro: 18,
         prata: 19,
         bronze: 16,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AUS.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AUS.png"
     },
     {
-        pais: "França",
+        equipe: "França",
+        abreviacao: "FRA",
         ouro: 16,
         prata: 26,
         bronze: 22,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/FRA.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/FRA.png"
     },
     {
-        pais: "Países Baixos",
+        equipe: "Países Baixos",
+        abreviacao: "NED",
         ouro: 15,
         prata: 7,
         bronze: 12,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NED.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NED.png"
     },
     {
-        pais: "Grã-Bretanha",
+        equipe: "Grã-Bretanha",
+        abreviacao: "GBR",
         ouro: 14,
         prata: 22,
         bronze: 29,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GBR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GBR.png"
     },
     {
-        pais: "Coréia do Sul",
+        equipe: "Coréia do Sul",
+        abreviacao: "KOR",
         ouro: 13,
         prata: 9,
         bronze: 10,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KOR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KOR.png"
     },
     {
-        pais: "Itália",
+        equipe: "Itália",
+        abreviacao: "ITA",
         ouro: 12,
         prata: 13,
         bronze: 15,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ITA.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ITA.png"
     },
     {
-        pais: "Alemanha",
+        equipe: "Alemanha",
+        abreviacao: "GER",
         ouro: 12,
         prata: 13,
         bronze: 8,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GER.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GER.png"
     },
     {
-        pais: "Nova Zelândia",
+        equipe: "Nova Zelândia",
+        abreviacao: "NZL",
         ouro: 10,
         prata: 7,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NZL.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NZL.png"
     },
     {
-        pais: "Canadá",
+        equipe: "Canadá",
+        abreviacao: "CAN",
         ouro: 9,
         prata: 7,
         bronze: 11,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CAN.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CAN.png"
     },
     {
-        pais: "Uzbequistão",
+        equipe: "Uzbequistão",
+        abreviacao: "UZB",
         ouro: 8,
         prata: 2,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UZB.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UZB.png"
     },
     {
-        pais: "Hungria",
+        equipe: "Hungria",
+        abreviacao: "HUN",
         ouro: 6,
         prata: 7,
         bronze: 6,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/HUN.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/HUN.png"
     },
     {
-        pais: "Espanha",
+        equipe: "Espanha",
+        abreviacao: "ESP",
         ouro: 5,
         prata: 4,
         bronze: 9,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ESP.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ESP.png"
     },
     {
-        pais: "Suécia",
+        equipe: "Suécia",
+        abreviacao: "SWE",
         ouro: 4,
         prata: 4,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SWE.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SWE.png"
     },
     {
-        pais: "Quênia",
+        equipe: "Quênia",
+        abreviacao: "KEN",
         ouro: 4,
         prata: 2,
         bronze: 5,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KEN.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KEN.png"
     },
     {
-        pais: "Noruega",
+        equipe: "Noruega",
+        abreviacao: "NOR",
         ouro: 4,
         prata: 1,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NOR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/NOR.png"
     },
     {
-        pais: "Irlanda",
+        equipe: "Irlanda",
+        abreviacao: "IRL",
         ouro: 4,
         prata: 0,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IRL.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IRL.png"
     },
     {
-        pais: "Brasil",
+        equipe: "Brasil",
+        abreviacao: "BRA",
         ouro: 3,
         prata: 7,
         bronze: 10,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BRA.png",
-    },
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BRA.png"
+    },    
     {
-        pais: "Irã",
+        equipe: "Irã",
+        abreviacao: "IRI",
         ouro: 3,
         prata: 6,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IRI.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IRI.png"
     },
     {
-        pais: "Ucrânia",
+        equipe: "Ucrânia",
+        abreviacao: "UKR",
         ouro: 3,
         prata: 5,
         bronze: 4,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UKR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UKR.png"
     },
     {
-        pais: "Romênia",
+        equipe: "Romênia",
+        abreviacao: "ROU",
         ouro: 3,
         prata: 4,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ROU.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ROU.png"
     },
     {
-        pais: "Geórgia",
+        equipe: "Geórgia",
+        abreviacao: "GEO",
         ouro: 3,
         prata: 3,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GEO.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GEO.png"
     },
     {
-        pais: "Bélgica",
+        equipe: "Bélgica",
+        abreviacao: "BEL",
         ouro: 3,
         prata: 1,
         bronze: 6,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BEL.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BEL.png"
     },
     {
-        pais: "Bulgária",
+        equipe: "Bulgária",
+        abreviacao: "BUL",
         ouro: 3,
         prata: 1,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BUL.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BUL.png"
     },
     {
-        pais: "Sérvia",
+        equipe: "Sérvia",
+        abreviacao: "SRB",
         ouro: 3,
         prata: 1,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SRB.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SRB.png"
     },
     {
-        pais: "Tchéquia",
+        equipe: "Tchéquia",
+        abreviacao: "CZE",
         ouro: 3,
         prata: 0,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CZE.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CZE.png"
     },
     {
-        pais: "Dinamarca",
+        equipe: "Dinamarca",
+        abreviacao: "DEN",
         ouro: 2,
         prata: 2,
         bronze: 5,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DEN.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DEN.png"
     },
     {
-        pais: "Azerbaijão",
+        equipe: "Azerbaijão",
+        abreviacao: "AZE",
         ouro: 2,
         prata: 2,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AZE.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AZE.png"
     },
     {
-        pais: "Croácia",
+        equipe: "Croácia",
+        abreviacao: "CRO",
         ouro: 2,
         prata: 2,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CRO.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CRO.png"
     },
     {
-        pais: "Cuba",
+        equipe: "Cuba",
+        abreviacao: "CUB",
         ouro: 2,
         prata: 1,
         bronze: 6,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CUB.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CUB.png"
     },
     {
-        pais: "Bahrein",
+        equipe: "Bahrein",
+        abreviacao: "BRN",
         ouro: 2,
         prata: 1,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BRN.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BRN.png"
     },
     {
-        pais: "Eslovênia",
+        equipe: "Eslovênia",
+        abreviacao: "SLO",
         ouro: 2,
         prata: 1,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SLO.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SLO.png"
     },
     {
-        pais: "Taipé Chinês",
+        equipe: "Taipé Chinês",
+        abreviacao: "TPE",
         ouro: 2,
         prata: 0,
         bronze: 5,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TPE.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TPE.png"
     },
     {
-        pais: "Áustria",
+        equipe: "Áustria",
+        abreviacao: "AUT",
         ouro: 2,
         prata: 0,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AUT.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/AUT.png"
     },
     {
-        pais: "Hong Kong",
+        equipe: "Hong Kong",
+        abreviacao: "HKG",
         ouro: 2,
         prata: 0,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/HKG.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/HKG.png"
     },
     {
-        pais: "Filipinas",
+        equipe: "Filipinas",
+        abreviacao: "PHI",
         ouro: 2,
         prata: 0,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PHI.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PHI.png"
     },
     {
-        pais: "Argélia",
+        equipe: "Argélia",
+        abreviacao: "ALG",
         ouro: 2,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ALG.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ALG.png"
     },
     {
-        pais: "Indonésia",
+        equipe: "Indonésia",
+        abreviacao: "INA",
         ouro: 2,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/INA.png",
-    },
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/INA.png"
+    },    
     {
-        pais: "Israel",
+        equipe: "Israel",
+        abreviacao: "ISR",
         ouro: 1,
         prata: 5,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ISR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ISR.png"
     },
     {
-        pais: "Polônia",
+        equipe: "Polônia",
+        abreviacao: "POL",
         ouro: 1,
         prata: 4,
         bronze: 5,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/POL.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/POL.png"
     },
     {
-        pais: "Cazaquistão",
+        equipe: "Cazaquistão",
+        abreviacao: "KAZ",
         ouro: 1,
         prata: 3,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KAZ.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KAZ.png"
     },
     {
-        pais: "Jamaica",
+        equipe: "Jamaica",
+        abreviacao: "JAM",
         ouro: 1,
         prata: 3,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JAM.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JAM.png"
     },
     {
-        pais: "África do Sul",
+        equipe: "África do Sul",
+        abreviacao: "RSA",
         ouro: 1,
         prata: 3,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/RSA.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/RSA.png"
     },
     {
-        pais: "Tailândia",
+        equipe: "Tailândia",
+        abreviacao: "THA",
         ouro: 1,
         prata: 3,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/THA.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/THA.png"
     },
     {
-        pais: "Etiópia",
+        equipe: "Etiópia",
+        abreviacao: "ETH",
         ouro: 1,
         prata: 3,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ETH.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ETH.png"
     },
     {
-        pais: "Suíça",
+        equipe: "Suíça",
+        abreviacao: "SUI",
         ouro: 1,
         prata: 2,
         bronze: 5,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SUI.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SUI.png"
     },
     {
-        pais: "Equador",
+        equipe: "Equador",
+        abreviacao: "ECU",
         ouro: 1,
         prata: 2,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ECU.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ECU.png"
     },
     {
-        pais: "Portugal",
+        equipe: "Portugal",
+        abreviacao: "POR",
         ouro: 1,
         prata: 2,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/POR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/POR.png"
     },
     {
-        pais: "Grécia",
+        equipe: "Grécia",
+        abreviacao: "GRE",
         ouro: 1,
         prata: 1,
         bronze: 6,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GRE.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GRE.png"
     },
     {
-        pais: "Argentina",
+        equipe: "Argentina",
+        abreviacao: "ARG",
         ouro: 1,
         prata: 1,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ARG.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ARG.png"
     },
     {
-        pais: "Egito",
+        equipe: "Egito",
+        abreviacao: "EGY",
         ouro: 1,
         prata: 1,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/EGY.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/EGY.png"
     },
     {
-        pais: "Tunísia",
+        equipe: "Tunísia",
+        abreviacao: "TUN",
         ouro: 1,
         prata: 1,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TUN.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TUN.png"
     },
     {
-        pais: "Botsuana",
+        equipe: "Botsuana",
+        abreviacao: "BOT",
         ouro: 1,
         prata: 1,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BOT.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/BOT.png"
     },
     {
-        pais: "Chile",
+        equipe: "Chile",
+        abreviacao: "CHI",
         ouro: 1,
         prata: 1,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CHI.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CHI.png"
     },
     {
-        pais: "Santa Lúcia",
+        equipe: "Santa Lúcia",
+        abreviacao: "LCA",
         ouro: 1,
         prata: 1,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/LCA.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/LCA.png"
     },
     {
-        pais: "Uganda",
+        equipe: "Uganda",
+        abreviacao: "UGA",
         ouro: 1,
         prata: 1,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UGA.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/UGA.png"
     },
     {
-        pais: "República Dominicana",
+        equipe: "República Dominicana",
+        abreviacao: "DOM",
         ouro: 1,
         prata: 0,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DOM.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DOM.png"
     },
     {
-        pais: "Guatemala",
+        equipe: "Guatemala",
+        abreviacao: "GUA",
         ouro: 1,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GUA.png",
-    },
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GUA.png"
+    },    
     {
-        pais: "Marrocos",
+        equipe: "Marrocos",
+        abreviacao: "MAR",
         ouro: 1,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MAR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MAR.png"
     },
     {
-        pais: "Dominica",
+        equipe: "Dominica",
+        abreviacao: "DMA",
         ouro: 1,
         prata: 0,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DMA.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/DMA.png"
     },
     {
-        pais: "Paquistão",
+        equipe: "Paquistão",
+        abreviacao: "PAK",
         ouro: 1,
         prata: 0,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PAK.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PAK.png"
     },
     {
-        pais: "Turquia",
+        equipe: "Turquia",
+        abreviacao: "TUR",
         ouro: 0,
         prata: 3,
         bronze: 5,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TUR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TUR.png"
     },
     {
-        pais: "México",
+        equipe: "México",
+        abreviacao: "MEX",
         ouro: 0,
         prata: 3,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MEX.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MEX.png"
     },
     {
-        pais: "Armênia",
+        equipe: "Armênia",
+        abreviacao: "ARM",
         ouro: 0,
         prata: 3,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ARM.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ARM.png"
     },
     {
-        pais: "Colômbia",
+        equipe: "Colômbia",
+        abreviacao: "COL",
         ouro: 0,
         prata: 3,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/COL.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/COL.png"
     },
     {
-        pais: "Quirguistão",
+        equipe: "Quirguistão",
+        abreviacao: "KGZ",
         ouro: 0,
         prata: 2,
         bronze: 4,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KGZ.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KGZ.png"
     },
     {
-        pais: "Coreia do Norte",
+        equipe: "Coreia do Norte",
+        abreviacao: "PRK",
         ouro: 0,
         prata: 2,
         bronze: 4,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PRK.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PRK.png"
     },
     {
-        pais: "Lituânia",
+        equipe: "Lituânia",
+        abreviacao: "LTU",
         ouro: 0,
         prata: 2,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/LTU.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/LTU.png"
     },
     {
-        pais: "Índia",
+        equipe: "Índia",
+        abreviacao: "IND",
         ouro: 0,
         prata: 1,
         bronze: 5,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IND.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/IND.png"
     },
     {
-        pais: "República da Maldávia",
+        equipe: "República da Maldávia",
+        abreviacao: "MDA",
         ouro: 0,
         prata: 1,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MDA.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MDA.png"
     },
     {
-        pais: "Kosovo",
+        equipe: "Kosovo",
+        abreviacao: "KOS",
         ouro: 0,
         prata: 1,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KOS.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/KOS.png"
     },
     {
-        pais: "Chipre",
+        equipe: "Chipre",
+        abreviacao: "CYP",
         ouro: 0,
         prata: 1,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CYP.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CYP.png"
     },
     {
-        pais: "Fiji",
+        equipe: "Fiji",
+        abreviacao: "FIJ",
         ouro: 0,
         prata: 1,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/FIJ.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/FIJ.png"
     },
     {
-        pais: "Jordânia",
+        equipe: "Jordânia",
+        abreviacao: "JOR",
         ouro: 0,
         prata: 1,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JOR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/JOR.png"
     },
     {
-        pais: "Mongólia",
+        equipe: "Mongólia",
+        abreviacao: "MGL",
         ouro: 0,
         prata: 1,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MGL.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MGL.png"
     },
     {
-        pais: "Panamá",
+        equipe: "Panamá",
+        abreviacao: "PAN",
         ouro: 0,
         prata: 1,
         bronze: 0,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PAN.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PAN.png"
     },
     {
-        pais: "Tajiquistão",
+        equipe: "Tajiquistão",
+        abreviacao: "TJK",
         ouro: 0,
         prata: 0,
         bronze: 3,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TJK.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/TJK.png"
     },
     {
-        pais: "Albânia",
+        equipe: "Albânia",
+        abreviacao: "ALB",
         ouro: 0,
         prata: 0,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ALB.png",
-    },
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ALB.png"
+    },    
     {
-        pais: "Granada",
+        equipe: "Granada",
+        abreviacao: "GRN",
         ouro: 0,
         prata: 0,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GRN.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/GRN.png"
     },
     {
-        pais: "Malásia",
+        equipe: "Malásia",
+        abreviacao: "MAS",
         ouro: 0,
         prata: 0,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MAS.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/MAS.png"
     },
     {
-        pais: "Porto Rico",
+        equipe: "Porto Rico",
+        abreviacao: "PUR",
         ouro: 0,
         prata: 0,
         bronze: 2,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PUR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PUR.png"
     },
     {
-        pais: "Costa do Marfim",
+        equipe: "Costa do Marfim",
+        abreviacao: "CIV",
         ouro: 0,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CIV.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CIV.png"
     },
     {
-        pais: "Cabo Verde",
+        equipe: "Cabo Verde",
+        abreviacao: "CPV",
         ouro: 0,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CPV.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/CPV.png"
     },
     {
-        pais: "Equipe Olímpica de Refugiados",
+        equipe: "Equipe Olímpica de Refugiados",
+        abreviacao: "EOR",
         ouro: 0,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/EOR.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/EOR.png"
     },
     {
-        pais: "Peru",
+        equipe: "Peru",
+        abreviacao: "PER",
         ouro: 0,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PER.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/PER.png"
     },
     {
-        pais: "Catar",
+        equipe: "Catar",
+        abreviacao: "QAT",
         ouro: 0,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/QAT.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/QAT.png"
     },
     {
-        pais: "Singapura",
+        equipe: "Singapura",
+        abreviacao: "SGP",
         ouro: 0,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SGP.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SGP.png"
     },
     {
-        pais: "Eslováquia",
+        equipe: "Eslováquia",
+        abreviacao: "SVK",
         ouro: 0,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SVK.png",
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/SVK.png"
     },
     {
-        pais: "Zâmbia",
+        equipe: "Zâmbia",
+        abreviacao: "ZAM",
         ouro: 0,
         prata: 0,
         bronze: 1,
-        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ZAM.png",
-    }
+        url: "https://gstatic.olympics.com/s1/t_original/static/noc/oly/3x2/180x120/ZAM.png"
+    },    
 ];
