@@ -4,6 +4,8 @@ body {
     color: #e0e0e0;
     margin: 0;
     padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
     box-sizing: border-box;
 }
 
@@ -15,7 +17,7 @@ body {
 }
 
 h1 {
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
 }
 
 .explicacao-container {
@@ -23,14 +25,17 @@ h1 {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 16px;
-    padding-left: 100px;
-    padding-right: 100px;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center; /* Centraliza o texto */
+}
+
+.explicacao-container p {
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 .explicacao-container ul {
@@ -49,7 +54,7 @@ h1 {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 16px;
     box-sizing: border-box;
@@ -161,8 +166,14 @@ th img {
 
 /* Tornando a tabela rolável em telas pequenas */
 @media (max-width: 768px) {
+
+    .explicacao-container p {
+        padding: 0%;
+    }
+
     .tabela-container {
         overflow-x: auto;
+        padding: 0%;
     }
 
     /* Em telas pequenas, oculte o nome completo e exiba a abreviação */
@@ -171,22 +182,24 @@ th img {
     }
     td.equipe .abreviacao {
         display: inline;
+        font-size: 12px;
     }
 
     th, td {
-        padding: 8px 6px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
         font-size: 12px;
     }
 
     td.equipe {
         width: 90px;
-        font-size: 11px;
     } 
 
     td.equipe img {
-        margin-right: 6px;
-        width: 22.5px;
-        height: 15px;
+        margin-right: 8px;
+        width: 21px;
+        height: 14px;
     }
 
     .emblema {
@@ -202,18 +215,48 @@ th img {
     }
 
     th img {
-        width: 15px; /* Tamanho menor para telas pequenas */
+        width: 10px; /* Tamanho menor para telas pequenas */
         height: auto;
     }
 }
 
 @media (max-width: 480px) {
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    li {
+        font-size: 10px;
+    }
+
+    td.equipe .abreviacao {
+        font-size: 10px;
+    }
+
     th, td {
-        padding: 4px 2px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
         font-size: 10px;
     }
 
     td.equipe {
         width: 70px;
+        flex: 3; 
+    }
+
+    th.equipe {
+        flex: 3;
+    }
+
+    td.equipe img {
+        margin-right: 6px;
+        width: 15px;
+        height: 10px;
     }
 }
